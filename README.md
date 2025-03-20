@@ -1,3 +1,1 @@
 # Simple Echo Server
-
-Test
