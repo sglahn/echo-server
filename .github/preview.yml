@@ -3,7 +3,10 @@ name: Pull Request Build and Test
 on:
   pull_request:
     branches:
-      - '**'
+      - main
+  push:
+    branches-ignore:
+      - main
 
 jobs:
   build-and-test:
