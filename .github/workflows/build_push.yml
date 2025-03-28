@@ -52,9 +52,9 @@ jobs:
 
     - name: Update Kubernetes Manifests
       run: |
-        sed -i "s|PLACEHOLDER_TAG|$IMAGE_TAG|g" /Users/sglahn/Personal/echo-server/deployments/base/kustomization.yaml
+        sed -i "s|PLACEHOLDER_TAG|$IMAGE_TAG|g" deployments/base/deployment.yaml
         git config user.name "github-actions"
         git config user.email "actions@github.com"
-        git add /Users/sglahn/Personal/echo-server/deployments/base/kustomization.yaml
+        git add deployments/base/deployment.yaml
         git commit -m "Update image tag to $IMAGE_TAG"
         git push
