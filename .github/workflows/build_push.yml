@@ -59,6 +59,7 @@ jobs:
         sed -i "s|PLACEHOLDER_TAG|${{ steps.docker_build.outputs.image_tag }}|g" deployments/prod/kustomization.yaml
         git config user.name "github-actions"
         git config user.email "actions@github.com"
-        git add deployments/base/deployment.yaml
+        git add deployments/dev/kustomization.yaml
+        git add deployments/prod/kustomization.yaml
         git commit -m "Update image tag to $IMAGE_TAG"
         git push
