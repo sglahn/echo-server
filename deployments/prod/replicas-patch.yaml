@@ -3,4 +3,4 @@ kind: Deployment
 metadata:
   name: echo-server
 spec:
-  replicas: 3
+  replicas: 2
