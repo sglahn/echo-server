@@ -2,3 +2,6 @@ resources:
   - ../base
 patchesStrategicMerge:
   - replicas-patch.yaml
+images:
+  - name: sglahn/echo-server
+    newTag: PLACEHOLDER_TAG
