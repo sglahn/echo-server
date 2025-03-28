@@ -1,0 +1,5 @@
+namespace: dev
+resources:
+  - ../kustomization.yaml
+patchesStrategicMerge:
+  - replicas-patch.yaml
