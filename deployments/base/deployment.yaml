@@ -18,7 +18,7 @@ spec:
         app: echo-server
     spec:
       containers:
-      - image: sglahn/echo-server:latest
+      - image: sglahn/echo-server:PLACEHOLDER_TAG
         name: echo-server
         resources: {}
         livenessProbe:
