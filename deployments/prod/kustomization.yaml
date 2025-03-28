@@ -1,5 +1,5 @@
 namespace: prod
 resources:
-  - ../kustomization.yaml
+  - ../base/kustomization.yaml
 patchesStrategicMerge:
   - replicas-patch.yaml
