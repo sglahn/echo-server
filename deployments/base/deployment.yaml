@@ -23,10 +23,10 @@ spec:
         resources: {}
         livenessProbe:
           httpGet:
-            path: /actuator/health/liveness
+            path: /admin/live
             port: 8080
         readinessProbe:
           httpGet:
-            path: /actuator/health/readiness
+            path: /admin/ready
             port: 8080
 status: {}
