@@ -20,7 +20,13 @@ spec:
       containers:
       - image: sglahn/echo-server:latest
         name: echo-server
-        resources: {}
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "500m"
+          limits:
+            memory: "256Mi"
+            cpu: "500m"
         livenessProbe:
           httpGet:
             path: /actuator/health/liveness
