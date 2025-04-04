@@ -4,4 +4,4 @@ patchesStrategicMerge:
   - replicas-patch.yaml
 images:
   - name: sglahn/echo-server
-    newTag: 20250404132703-78cd822
+    newTag: 20250404132928-cabb328
