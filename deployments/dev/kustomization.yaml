@@ -6,4 +6,4 @@ patches:
 - path: replicas-patch.yaml
 images:
   - name: sglahn/echo-server
-    newTag: 20250404084919-0868771
+    newTag: 20250404085114-37b246b
