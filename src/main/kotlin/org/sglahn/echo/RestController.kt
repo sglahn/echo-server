@@ -15,19 +15,6 @@ import org.springframework.web.bind.annotation.RestController
 import java.util.*
 
 @RestController
-class AdminController() {
-    @GetMapping("/admin/live")
-    fun health(): ResponseEntity<String> {
-        return ResponseEntity.status(HttpStatus.OK).body("Healthy")
-    }
-
-    @GetMapping("/admin/ready")
-    fun ready(): ResponseEntity<String> {
-        return ResponseEntity.status(HttpStatus.OK).body("Ready")
-    }
-}
-
-@RestController
 class EchoController() {
     private val LOG: Logger = LoggerFactory.getLogger(EchoController::class.java)
 
@@ -37,7 +24,7 @@ class EchoController() {
     @Value( "\${echo-server.id}" )
     val id: String = "default"
 
-    @RequestMapping("/**", produces = [MediaType.APPLICATION_JSON_VALUE])
+    @RequestMapping("/hello", produces = [MediaType.APPLICATION_JSON_VALUE])
     fun echo(@RequestBody(required = false) rawBody: ByteArray?) : ResponseEntity<EchoPayload> {
         val headers = HashMap<String, String>()
         request!!.headerNames.asIterator().forEach { name ->
